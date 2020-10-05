@@ -4,17 +4,22 @@ echo
 ?>
 
 
-<script>
-  
-  // 86acbd31cd7c09cf30acb66d2fbedc91daa48b86:1601923827.4894443
-importScripts('https://aswpsdkus.com/notify/v1/ua-sdk.min.js')
-uaSetup.worker(self, {
-  defaultIcon: 'https://www.koderlabs.com/assets/img/logo/new\u002Dlogo.png',
-  defaultTitle: 'asdasdasd',
-  defaultActionURL: 'https://www.koderlabs.com/',
+<script type="text/javascript">
+!function(n,t,c,e,u){function r(n){try{f=n(u)}catch(n){return h=n,void i(p,n)}i(s,f)}function i(n,t){for(var c=0;c<n.length;c++)d(n[c],t);
+}function o(n,t){return n&&(f?d(n,f):s.push(n)),t&&(h?d(t,h):p.push(t)),l}function a(n){return o(!1,n)}function d(t,c){
+n.setTimeout(function(){t(c)},0)}var f,h,s=[],p=[],l={then:o,catch:a,_setup:r};n[e]=l;var v=t.createElement("script");
+v.src=c,v.async=!0,v.id="_uasdk",v.rel=e,t.head.appendChild(v)}(window,document,'https://web-sdk.urbanairship.com/notify/v1/ua-sdk.min.js',
+  'UA', // This value can be changed to use a custom variable name.
+  {
   appKey: 'jRJCfBp7QteCDXjN3m51jA',
   token: 'MTpqUkpDZkJwN1F0ZUNEWGpOM201MWpBOjdDdnZkRmk0QTE0TFNBSFJneVFadzR3TnNXX2xIMXVadnUxaWZUSHdKTmc',
-  vapidPublicKey: 'BJK-wKCSsyYYkoBWWT-UMxLixmJZ-PVe11Tidxd3KGqhIJYpSA9jkDASk25pHjy69lvsIaxbNndbwse_BV0oZi8='
-})
 
-  </script>
+  // Safari Web Push only
+  websitePushId: 'BJK-wKCSsyYYkoBWWT-UMxLixmJZ-PVe11Tidxd3KGqhIJYpSA9jkDASk25pHjy69lvsIaxbNndbwse_BV0oZi8=',
+  // Open Web Push Protocol only.
+  vapidPublicKey: 'BJK-wKCSsyYYkoBWWT-UMxLixmJZ-PVe11Tidxd3KGqhIJYpSA9jkDASk25pHjy69lvsIaxbNndbwse_BV0oZi8=',
+  // Only needed when used on insecure hosts:
+  secureIframeUrl: 'https://your.secure.domain/path/to/web-push-secure-bridge.html'
+  })
+</script>
+
